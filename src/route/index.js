@@ -4,9 +4,9 @@ import { message } from 'ant-design-vue';
 import index from '../components/nav.vue';
 // 动态引入组件
 const Demo = () => import('../components/demo.vue');
-const Helloworld = () => import('../components/HelloWorld.vue');
-const Test = () => import('../components/test.vue');
-const Board = () => import('../components/board.vue');
+const Helloworld = () => import('@/components/HelloWorld.vue');
+const Test = () => import('@/components/test.vue');
+const Board = () => import('@/components/board.vue');
 
 // 导出路由
 export const router = createRouter({
