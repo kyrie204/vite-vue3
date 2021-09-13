@@ -21,6 +21,7 @@ export default {
       { name: 'demo', path: '/demo', parma: { a: '123', b: 'demo' } },
       { name: 'test', path: '/test', parma2: { a: '123', b: 'test' } },
       { name: 'board', path: '/board' },
+      { name: 'vueuse', path: '/vueuse' },
     ];
     let jump = (obj) => {
       if (obj.parmars) {
