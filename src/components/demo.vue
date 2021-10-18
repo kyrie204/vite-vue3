@@ -6,17 +6,22 @@
   <div>
     <a-button type="primary" @click="add">add</a-button>
     <ul>
-      <li v-for="(item, index) in list" :key="item.id||index">{{ item.name }}</li>
+      <li v-for="(item, index) in list" :key="item.id || index">{{ item.name }}</li>
     </ul>
   </div>
+  <customSlot></customSlot>
 </template>
 
 <script>
 import { reactive, toRefs, ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { useStore } from 'vuex';
+import customSlot from './myslot.vue';
 
 export default {
+  components: {
+    customSlot,
+  },
   setup(props, context) {
     console.log(props, context);
     const router = useRouter();
