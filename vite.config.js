@@ -14,16 +14,22 @@ export default defineConfig({
     },
   },
 
+  base: '/dist/',
   server: {
     host: '0.0.0.0', //可以通过ip访问
     port: '3000',
     open: true, //自动打开浏览器
-
+    
     proxy: { //代理
       '/api': {
         target: 'http://jsonplaceholder.typicode.com',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
+      },
+      '/v2': {
+        target: 'https://api.douban.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/v2/, '/v2/')
       },
     },
   },

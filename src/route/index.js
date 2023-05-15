@@ -1,5 +1,5 @@
 // 创建vue router,使用哈希模式
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
 import { message } from 'ant-design-vue';
 import index from '../components/nav.vue';
 // 动态引入组件
@@ -11,7 +11,9 @@ const Vueuse = () => import('@src/components/vueuse.vue');
 
 // 导出路由
 export const router = createRouter({
-  history: createWebHashHistory(),
+  // history: createWebHashHistory(),
+  history: createWebHistory('dist'),
+  base: 'dist',
   routes: [
     {
       path: '/',

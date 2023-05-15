@@ -33,7 +33,8 @@ export default {
 
     const req = async () => {
       console.log(proxy.$axios);
-      const result = await proxy.$axios.get('https://601ce2ca1a9c220017060f1d.mockapi.io/api/v1/search');//, { a: '1', b: '2' }
+      // const result = await proxy.$axios.get('https://601ce2ca1a9c220017060f1d.mockapi.io/api/v1/search');//, { a: '1', b: '2' }
+      const result = await proxy.$axios.get('https://api.douban.com/v2/user/1000001?apikey=0b2bdeda43b5688921839c8ecb20399b');//, { a: '1', b: '2' }
 
       dataSource.value = result.list;
       loading.value = false;

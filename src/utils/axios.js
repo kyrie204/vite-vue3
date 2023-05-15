@@ -8,6 +8,7 @@ import { message } from 'ant-design-vue';
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 //设置超时
 axios.defaults.timeout = 10000;
+// axios.defaults.baseURL = 'https://api.douban.com';
 
 axios.interceptors.request.use(
   (config) => {

@@ -2,7 +2,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "buildHistory": "vite build && rm -rf H:/nginx/nginx-1.20.0/html/dist && cp -r dist H:/nginx/nginx-1.20.0/html",
+    "buildHash": "vite build && rm -rf H:/nginx/nginx-1.20.0/html/dist && cp -r dist H:/nginx/nginx-1.20.0/html",
     "serve": "vite preview"
   },
   "dependencies": {
